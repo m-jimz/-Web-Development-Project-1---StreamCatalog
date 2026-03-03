@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Steam Catalog</h1>
-      <h2>Your Favorite Games List!</h2>
+      <h2>My Favorite Games List!</h2>
       <EventCard/>      
     </div>
 

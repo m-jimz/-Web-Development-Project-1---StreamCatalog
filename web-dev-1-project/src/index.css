@@ -1,32 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  color: black;
-  background-color: white;
+
+/* ...existing code... */
+
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --card: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --accent-hover: #16a34a;
+
+
+
+
+
 }
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 per row */
+  gap: 16px;
+}
+
+.card {
+  background: var(white);
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 150px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh; 
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-th {
-  width: 120px;
-  padding-top:25px;
-  padding-bottom:30px;
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
 }
 
-td {
-  padding: 5px;
+.card p {
+  margin: 0 0 14px;
+  color: var(--muted);
 }
 
-.time {
-  height: 40px;
+.card a {
+  text-decoration: none;
+}
+
+.card button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--accent);
+  color: #06250f;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
 }
